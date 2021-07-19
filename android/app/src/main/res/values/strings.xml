@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="facebook_client_token">Facebook Client ID</string>
+    <string name="app_name">rovers</string>
+    <string name="facebook_app_id">209546794419360</string>
+    <string name="fb_login_protocol_scheme">fb209546794419360</string>
+</resources>

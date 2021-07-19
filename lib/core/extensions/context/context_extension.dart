@@ -13,10 +13,7 @@ extension ContextExtension on BuildContext {
 
   EdgeInsetsGeometry get lowestEdgeInsets => EdgeInsets.all(5);
 
-  EdgeInsetsGeometry get pageEdgeInsets => EdgeInsets.only(
-      left: this.dynamicWidth(25),
-      right: this.dynamicWidth(25),
-      bottom: this.dynamicHeight(25));
+  EdgeInsetsGeometry get pageEdgeInsets => EdgeInsets.all(this.dynamicWidth(25));
 
   EdgeInsetsGeometry get lowEdgeInsets => EdgeInsets.symmetric(
       horizontal: this.dynamicWidth(35), vertical: this.dynamicHeight(15));

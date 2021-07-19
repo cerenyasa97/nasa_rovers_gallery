@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "239586600230",
+    "project_id": "rovers-9737b",
+    "storage_bucket": "rovers-9737b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:239586600230:android:e15992fbd9fb8e7514cde7",
+        "android_client_info": {
+          "package_name": "com.parasut.rovers"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "239586600230-upo8qjmb2floqtao9ofis7to61881qgj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.parasut.rovers",
+            "certificate_hash": "c225f2be5cf9cc50400136758de793558610b4fc"
+          }
+        },
+        {
+          "client_id": "239586600230-rj39bki225btg4e7hro47tv5mdiseahf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwRqPEWlMg2nGMUgWVeGSp70KgwYulCoA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "239586600230-rj39bki225btg4e7hro47tv5mdiseahf.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "239586600230-8650ikh5s8p6gs8ektpo21uqf9rj2mhc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.parasut.rovers"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
