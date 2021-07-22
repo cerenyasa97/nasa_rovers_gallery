@@ -1,13 +1,13 @@
 class TextConstants{
   static const String FAHZ = "FHAZ";
-  static const String RAHZ = "RAHZ";
+  static const String RAHZ = "RHAZ";
   static const String MAST = "MAST";
   static const String CHEMCAM = "CHEMCAM";
   static const String MAHLI = "MAHLI";
   static const String MARDI = "MARDI";
-  static const String NAVCAM = "NAVCA";
-  static const String PANCAM = "PANCA";
-  static const String MINITES = "MINIT";
+  static const String NAVCAM = "NAVCAM";
+  static const String PANCAM = "PANCAM";
+  static const String MINITES = "MINITES";
   static const List<String> CURIOSITY_TAB_TEXT = [
     FAHZ,
     RAHZ,
