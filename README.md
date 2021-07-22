@@ -25,7 +25,7 @@ samples, guidance on mobile development, and a full API reference.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Spirit, Opprtunity, and Curiosity tabs keep their own state. In this way, when navigating between tabs, each tab continues to work from where it left off.
 
 <p align="center">
-  <img src = "https://user-images.githubusercontent.com/59059790/126638867-98295a5f-9bd6-4644-ba8e-67953a352863.gif" width = "500">
+  <img src = "https://user-images.githubusercontent.com/59059790/126638867-98295a5f-9bd6-4644-ba8e-67953a352863.gif" width = "300">
 </p>
 
 ### Getting Started
