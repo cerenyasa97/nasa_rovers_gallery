@@ -7,4 +7,6 @@ class AppConstants{
   static const double BUTTON_BORDER_RADIUS = 30;
   static const double PROGRESS_INDICATOR_RADIUS = 20;
   static const int STAGGARED_CROSS_AXIS_COUNT = 2;
+  static const String HIVE_BOX_KEY = "Gallery";
+  static const String IS_APP_OPEN_FIRST_TIME = "isOpenFirstTime";
 }

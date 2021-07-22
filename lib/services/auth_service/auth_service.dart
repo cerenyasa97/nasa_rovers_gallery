@@ -8,6 +8,7 @@ class FirebaseAuthService implements AuthBase {
   final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   GoogleSignIn _googleSignIn = GoogleSignIn();
 
+  // Returns the user currently logged into the app in Firebase of type UserModel
   @override
   UserModel? currentUser() {
     try {
@@ -19,6 +20,7 @@ class FirebaseAuthService implements AuthBase {
     }
   }
 
+  // Returns type User from Firebase to UserModel
   UserModel? _userFromFirebase(User? user) {
     if (user == null)
       return null;
@@ -26,17 +28,7 @@ class FirebaseAuthService implements AuthBase {
       return UserModel(userID: user.uid);
   }
 
-  @override
-  Future<UserModel?> signInAnonymously() async {
-    try {
-      UserCredential res = await _firebaseAuth.signInAnonymously();
-      return _userFromFirebase(res.user);
-    } catch (e) {
-      print("Sign in anonymously error: $e");
-      return null;
-    }
-  }
-
+  // User logs out
   @override
   Future<bool> signOut() async {
     try {
@@ -50,6 +42,7 @@ class FirebaseAuthService implements AuthBase {
     }
   }
 
+  // A credential is created with the information from the Google user's account and the user is logged in with this credential
   @override
   Future<UserModel?> signInWithGoogle() async {
     UserCredential? result;
@@ -65,6 +58,7 @@ class FirebaseAuthService implements AuthBase {
     return result != null ? UserModel(userID: result.user!.uid) : null;
   }
 
+  //A credential is created with the information from the Facebook user's account and the user is logged in with this credential.
   @override
   Future<UserModel?>? signInWithFacebook() async {
     late OAuthCredential credential;
@@ -83,7 +77,7 @@ class FirebaseAuthService implements AuthBase {
           print("signin with credential error: $e");
         }
 
-        return null; //UserModel(userID: credential.user!.uid);
+        return UserModel(userID: userCredential.user!.uid);
       case LoginStatus.cancelled:
         print("User cancelled Facebook login");
         return null;

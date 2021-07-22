@@ -41,23 +41,6 @@ class LoginViewModel extends ChangeNotifier implements AuthBase{
       print("Current User error: $e");
     }
   }
-
-  Future<UserModel?> signInAnonymously() async {
-    try{
-      appState = AppState.BUSY;
-      UserModel? user = await authService.signInAnonymously();
-      if (user != null) {
-        loginStatus = LoginStatus.LOGGED_IN;
-      }
-      return user;
-    }catch(e){
-      print("Sign in anonymously error: $e");
-      return null;
-    }finally{
-      appState = AppState.IDLE;
-    }
-  }
-
   @override
   UserModel? currentUser() {
     return user;

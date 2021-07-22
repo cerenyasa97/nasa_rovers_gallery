@@ -66,64 +66,20 @@ class _LoginScreenState extends State<LoginScreen> {
   _getChild(String image, String text, Function() onPressed) {
     return ProjectCupertinoButton(
         isCircularCorner: true,
-        padding: context.verticalLowEdgeInsets,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            SvgImage(imagePath: image, height: context.dynamicHeight(35)),
-            context.lowWidthSizedBox,
-            ProjectTextLocale(text: text),
-          ],
+        padding: context.lowEdgeInsets,
+        child: Container(
+          width: context.dynamicWidth(275),
+          child: Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Flexible(flex: 1, child: SvgImage(imagePath: image, height: context.dynamicHeight(35))),
+              context.lowWidthSizedBox,
+              Expanded(flex: 2, child: ProjectTextLocale(text: text)),
+            ],
+          ),
         ),
         buttonColor: ColorConstants.buttonColor,
         onPressed: onPressed);
   }
 }
-/*
-CupertinoPageScaffold(
-        resizeToAvoidBottomInset: false,
-        child: SafeArea(
-          child: Container(
-            width: double.maxFinite,
-            height: double.maxFinite,
-            child: Column(
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                Expanded(
-                  flex: 4,
-                  child: SvgImage(
-                    width: double.maxFinite,
-                    imagePath: ImageConstants.instance.loginVector,
-                  ),
-                ),
-                Flexible(
-                    flex: 2,
-                    child: Consumer<LoginViewModel>(
-                      builder: (context, snapshot, child){
-                        return Container(
-                      width: context.dynamicWidth(300),
-                      child: Column(
-                        children: [
-                          _getChild(
-                              ImageConstants.instance.googleLogin,
-                              LocaleKeys.continueWithGoogle,
-                                  () async {
-                                UserModel? res =
-                                await snapshot.signInAnonymously();
-                                NavigationService.instance
-                                    .navigatePush(context, Screens.HOME);
-                                if (res != null) print(res.userID);
-                              }),
-                          context.lowHeightSizedBox,
-                          _getChild(
-                              ImageConstants.instance.facebookLogin,
-                              LocaleKeys.continueWithFacebook,
-                                  () {})
-                        ],
-                      ),
-                    );})),
-              ],
-            ),
-          ),
-        ));
- */
